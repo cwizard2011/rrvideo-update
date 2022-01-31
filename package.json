@@ -1,0 +1,44 @@
+{
+  "name": "@cwizard/rrvideo-fix-ffmpeg",
+  "version": "0.2.5",
+  "description": "transform rrweb session into video",
+  "main": "build/index.js",
+  "bin": {
+    "rrvideo": "build/cli.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "test",
+    "build": "tsc",
+    "prepublish": "yarn build"
+  },
+  "author": "yanzhen@smartx.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/minimist": "^1.2.1",
+    "@types/puppeteer": "^5.4.4",
+    "minimist": "^1.2.5",
+    "puppeteer": "^10.2.0",
+    "rrweb-player": "^0.7.4",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwizard2011/rrvideo.git"
+  },
+  "keywords": [
+    "rrvideo",
+    "puppeteer",
+    "navigation",
+    "timeout",
+    "fix",
+    "ffmpeg"
+  ],
+  "bugs": {
+    "url": "https://github.com/cwizard2011/rrvideo/issues"
+  },
+  "homepage": "https://github.com/cwizard2011/rrvideo#readme"
+}
