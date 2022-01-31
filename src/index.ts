@@ -114,7 +114,7 @@ class RRvideo {
       const events = JSON.parse(fs.readFileSync(eventsPath, "utf-8"));
 
       await this.page.setContent(getHtml(events, this.config.rrwebPlayer));
-    } catch (error) {
+    } catch (error: any) {
       this.config.cb("", error);
     }
   }
