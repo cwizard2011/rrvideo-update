@@ -1,6 +1,6 @@
 {
   "name": "@cwizard/rrvideo-fix-ffmpeg",
-  "version": "0.2.5",
+  "version": "0.2.8",
   "description": "transform rrweb session into video",
   "main": "build/index.js",
   "bin": {
@@ -20,7 +20,7 @@
     "@types/minimist": "^1.2.1",
     "@types/puppeteer": "^5.4.4",
     "minimist": "^1.2.5",
-    "puppeteer": "^10.2.0",
+    "puppeteer": "^13.3.2",
     "rrweb-player": "^0.7.4",
     "typescript": "^4.0.5"
   },
