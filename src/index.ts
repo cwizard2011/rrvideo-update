@@ -98,7 +98,7 @@ class RRvideo {
       /* DISABLE NAVIGATION TIME OUT      
       await this.page.setDefaultNavigationTimeout(0); */ 
 
-      await this.page.goto("about:blank");
+      await this.page.goto("about:blank", { waitUntil: 'load' });
 
       await this.page.exposeFunction("onReplayStart", () => {
         this.startRecording();
