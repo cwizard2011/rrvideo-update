@@ -12,7 +12,7 @@
   "scripts": {
     "test": "test",
     "build": "tsc",
-    "prepublish": "yarn build"
+    "prepublish": "npm build"
   },
   "author": "yanzhen@smartx.com",
   "license": "MIT",
