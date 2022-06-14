@@ -141,6 +141,7 @@ class RRvideo {
       "image2pipe",
       "-i",
       "-",
+      '-profile:v main',
       "-vf", "format=yuv420p",
       "-movflags", "+faststart",
       // output
