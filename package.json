@@ -1,6 +1,6 @@
 {
   "name": "@cwizard/rrvideo-fix-ffmpeg",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "transform rrweb session into video",
   "main": "build/index.js",
   "bin": {
