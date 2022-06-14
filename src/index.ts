@@ -88,7 +88,7 @@ class RRvideo {
     try {
       this.browser = await puppeteer.launch({
         headless: this.config.headless,
-        args: ['--unlimited-storage','--full-memory-crash-report', '--disable-dev-shm-usage', '--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--disable-dev-shm-usage', '--no-sandbox', '--disable-setuid-sandbox', '--shm-size=2gb']
         /* DISABLE SANDBOX:
         CHANGE USER DOESN'T WORKS 'Failed to move to new namespace:' */
       });
@@ -98,7 +98,7 @@ class RRvideo {
       /* DISABLE NAVIGATION TIME OUT      
       await this.page.setDefaultNavigationTimeout(0); */ 
 
-      await this.page.goto("about:blank", { waitUntil: 'load' });
+      await this.page.goto("about:blank");
 
       await this.page.exposeFunction("onReplayStart", () => {
         this.startRecording();
@@ -114,7 +114,7 @@ class RRvideo {
       const events = JSON.parse(fs.readFileSync(eventsPath, "utf-8"));
 
       await this.page.setContent(getHtml(events, this.config.rrwebPlayer));
-    } catch (error: any) {
+    } catch (error) {
       this.config.cb("", error);
     }
   }
@@ -141,6 +141,9 @@ class RRvideo {
       "image2pipe",
       "-i",
       "-",
+      // "-pix_fmt",
+      // "yuv420p",
+
       // '-profile:v main',
       // "-vf", "format=yuv420p",
       // "-movflags", "+faststart",
