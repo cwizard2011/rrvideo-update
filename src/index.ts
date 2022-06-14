@@ -141,8 +141,8 @@ class RRvideo {
       "image2pipe",
       "-i",
       "-",
-      // "-pix_fmt",
-      // "yuv420p",
+      "-pix_fmt",
+      "yuv420p",
 
       // '-profile:v main',
       // "-vf", "format=yuv420p",
